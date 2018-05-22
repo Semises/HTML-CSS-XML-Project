@@ -1,0 +1,137 @@
+body {
+    background-color: black;
+    font-family: Calibri;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+main {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+header {
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+nav {
+    float: left;
+    background-color: white;
+    width: 200px;
+    min-height: 620px;
+    padding: 10px;
+}
+
+section {
+    float: left;
+    background-color: #000070;
+    padding: 20px;
+    width: 740px;
+    min-height: 600px;
+    color: white;
+}
+
+footer {
+    clear: both;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#galeria {
+    float: left;
+    padding: 50px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: wrap;
+}
+
+figure {
+    width: 15%;
+    background: lightgray;
+    border: 5px solid gray;
+    padding: 1%;
+}
+
+.photo img {
+    width: 100%;
+}
+
+
+.photo figcaption {
+    font-size: 16px;
+}
+
+.photo:nth-child(even) {
+    transform: rotate(-2deg) scale(0.8);
+}
+
+.photo:hover {
+    z-index: 10;
+    transition: 0.3s all linear;
+    transform: scale(3.0);
+}
+
+#arsenal-logo
+{
+	margin-left:70px;
+}
+#arsenal-logo svg:hover
+{
+	z-index: 10;
+    transition: 0.8s all linear;
+    transform: scale(5.0);
+}
+
+
+.gun {
+    width: 220px;
+    height: 120px;
+}
+
+h3::first-line {
+    color: brown;
+}
+
+th.row {
+    color: black;
+    border: 1px solid black;
+    background-color: white;
+    font-size: 16px;
+    text-align: left;
+    vertical-align: top;
+}
+
+td {
+    border: 1px solid black;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+th.col {
+    border: 1px solid black;
+    background-color: red;
+    font-size: 16px;
+    text-align: left;
+    vertical-align: top;
+
+}
+
+h1 {
+    font-family: Myriad;
+}
+
+h2 {
+    font-family: Myriad;
+}
