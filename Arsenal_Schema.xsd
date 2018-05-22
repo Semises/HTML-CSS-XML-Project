@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+	<xsd:element name="mecz" type="mecz_typ"/>
+	<xsd:element name="data" type="xsd:date"/>
+	
+	<xsd:complexType name="mecz_typ">
+		<xsd:sequence>
+			<xsd:element name="druzyna" type="druzyna_typ" maxOccurs="2"/>
+			<xsd:element name="karne" type="karne_typ"/>
+			<xsd:element name="widownia" type="zarobki_typ"/>
+		</xsd:sequence>
+			<xsd:attribute name="data_meczu" type="xsd:date"/>
+			<xsd:attribute ref="trener"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="druzyna_typ">
+		<xsd:sequence>
+			<xsd:element name="nazwa" type="nazwa_typ"/>
+			<xsd:element name="zawodnicy" type="zawodnik_typ" maxOccurs="5"/>
+			<xsd:element name="miasto" type="xsd:string"/>
+			<xsd:element ref="data" minOccurs="0"/>
+			<xsd:element name="logo">
+				<xsd:complexType>
+					<xsd:attribute name="zrodlo" type="xsd:string"/>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="link">
+				<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="xsd:string">
+							<xsd:attribute name="href" use="required"/>
+						</xsd:extension>
+					</xsd:simpleContent>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute ref="trener"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="karne_typ">
+		<xsd:sequence>
+			<xsd:element name="strzelcy" type="strzelcy_typ" maxOccurs="4"/>
+			<xsd:element name="stadion" maxOccurs="2">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:pattern value="Stadium_[a-z]+"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="dogrywka" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="strzelcy_typ">
+		<xsd:sequence>
+			<xsd:element name="nazwa" type="xsd:string"/>
+			<xsd:element name="klub" type="klub_typ"/>
+			<xsd:element name="numer" type="xsd:integer"/>
+			<xsd:element name="statystyki" type="statystyki_typ"/>
+			<xsd:element name="zarobki" type="zarobki_typ"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="zarobki_typ">
+		<xsd:restriction base="xsd:int">
+			<xsd:minExclusive value="0"/>
+			<xsd:maxExclusive value="1000000"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="statystyki_typ">
+		<xsd:sequence>
+			<xsd:element name="skutecznosc" type="skutecznosc_typ"/>
+			<xsd:element name="lepsza_noga" type="xsd:string"/>
+			<xsd:element name="strzelonych" type="xsd:integer"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="skutecznosc_typ">
+		<xsd:restriction base="xsd:integer">
+			<xsd:minInclusive value="0"/>
+			<xsd:maxInclusive value="100"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="zawodnik_typ" mixed="true">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0">
+				<xsd:element name="ksywa" type="xsd:string"/>
+				<xsd:element name="pozycja" type="xsd:string"/>
+			</xsd:choice>
+			<xsd:sequence>
+				<xsd:element name="imie" type="xsd:string"/>
+				<xsd:element name="nazwisko" type="xsd:string"/>
+				<xsd:element name="wiek">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:integer">
+							<xsd:minInclusive value="16"/>
+							<xsd:maxInclusive value="99"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="kraj_pochodzenia" type="kraj_pochodzenia_typ"/>
+				<xsd:element name="koszulka" type="koszulka_typ" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="koszulka_typ">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:integer">
+					<xsd:minInclusive value="1"/>
+					<xsd:maxInclusive value="99"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:enumeration value="D"/>
+					<xsd:enumeration value="W"/>
+					<xsd:enumeration value="T"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="klub_typ">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="Arsenal|Tottenham"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="nazwa_typ">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="3" />
+			<xsd:maxLength value="50" />
+		</xsd:restriction>
+	</xsd:simpleType>
+							
+	<xsd:attribute name="trener" type="xsd:string"/>
+	
+	<xsd:simpleType name="kraj_pochodzenia_typ">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Niemcy"/>
+			<xsd:enumeration value="Anglia"/>
+			<xsd:enumeration value="Argentyna"/>
+			<xsd:enumeration value="Chile"/>
+			<xsd:enumeration value="Francja"/>
+			<xsd:enumeration value="Walia"/>
+			<xsd:enumeration value="Ukraina"/>
+			<xsd:enumeration value="Nigeria"/>
+			<xsd:enumeration value="Uzbekistan"/>
+			<xsd:enumeration value="Stany Zjednoczone"/>
+			<xsd:enumeration value="Turcja"/>
+			<xsd:enumeration value="Irlandia"/>
+			<xsd:enumeration value="Portugalia"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>
+	
+	
+							
+							
+							
+					

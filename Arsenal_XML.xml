@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<mecz data_meczu="2017-02-10" trener="Michael Oliver">
+	<druzyna trener="Arsene Wenger">
+		<nazwa>Arsenal</nazwa>
+		<zawodnicy>
+			<imie>Alexis</imie>
+			<nazwisko>Sanchez</nazwisko>
+			<wiek>28</wiek>
+			<kraj_pochodzenia>Chile</kraj_pochodzenia>
+		</zawodnicy>
+		<zawodnicy>
+			<imie>Mesut</imie>
+			<nazwisko>Ozil</nazwisko>
+			<wiek>29</wiek>
+			<kraj_pochodzenia>Niemcy</kraj_pochodzenia>
+		</zawodnicy>
+		<zawodnicy>
+			<imie>Aaron</imie>
+			<nazwisko>Ramsey</nazwisko>
+			<wiek>26</wiek>
+			<kraj_pochodzenia>Walia</kraj_pochodzenia>
+		</zawodnicy>
+		<zawodnicy>
+			<imie>Olivier</imie>
+			<nazwisko>Giroud</nazwisko>
+			<wiek>31</wiek>
+			<kraj_pochodzenia>Francja</kraj_pochodzenia>
+		</zawodnicy>
+		<zawodnicy>
+			<imie>Laurent</imie>
+			<nazwisko>Koscielny</nazwisko>
+			<wiek>32</wiek>
+			<kraj_pochodzenia>Francja</kraj_pochodzenia>
+		</zawodnicy>
+		<miasto>Londyn</miasto>
+		<logo zrodlo="arsenal.png"/>
+		<link href="https://www.meczyki.pl/druzyna,arsenal-londyn,660">
+		https://www.meczyki.pl/druzyna,arsenal-londyn,660</link>
+	</druzyna>
+	<druzyna trener="Mauricio Pochettino">
+		<nazwa>Tottenham</nazwa>
+		<zawodnicy>
+			<imie>Hugo</imie>
+			<nazwisko>Lloris</nazwisko>
+			<wiek>30</wiek>
+			<kraj_pochodzenia>Francja</kraj_pochodzenia>
+		</zawodnicy>
+		<zawodnicy>
+			<imie>Harry</imie>
+			<nazwisko>Kane</nazwisko>
+			<wiek>24</wiek>
+			<kraj_pochodzenia>Anglia</kraj_pochodzenia>
+		</zawodnicy>
+		<zawodnicy>
+			<imie>Erik</imie>
+			<nazwisko>Lamela</nazwisko>
+			<wiek>25</wiek>
+			<kraj_pochodzenia>Argentyna</kraj_pochodzenia>
+		</zawodnicy>
+		<zawodnicy>
+			<imie>Dele</imie>
+			<nazwisko>Alli</nazwisko>
+			<wiek>21</wiek>
+			<kraj_pochodzenia>Anglia</kraj_pochodzenia>
+		</zawodnicy>
+		<zawodnicy>
+			<imie>Eric</imie>
+			<nazwisko>Dier</nazwisko>
+			<wiek>23</wiek>
+			<kraj_pochodzenia>Anglia</kraj_pochodzenia>
+		</zawodnicy>
+		<miasto>Londyn</miasto>
+		<logo zrodlo="tottenham.png"/>
+		<link href="https://www.meczyki.pl/druzyna,tottenham-hotspur,675">
+		https://www.meczyki.pl/druzyna,tottenham-hotspur,675</link>
+	</druzyna>
+	<karne dogrywka="TAK">
+		<strzelcy>
+			<nazwa>Alexis Sanchez</nazwa>
+			<klub>Arsenal</klub>
+			<numer>7</numer>
+			<statystyki>
+				<skutecznosc>100</skutecznosc>
+				<lepsza_noga>Prawa</lepsza_noga>
+				<strzelonych>7</strzelonych>
+			</statystyki>
+			<zarobki>270000</zarobki>
+		</strzelcy>
+		<strzelcy>
+			<nazwa>Mesut Ozil</nazwa>
+			<klub>Arsenal</klub>
+			<numer>7</numer>
+			<statystyki>
+				<skutecznosc>50</skutecznosc>
+				<lepsza_noga>Lewa</lepsza_noga>
+				<strzelonych>3</strzelonych>
+			</statystyki>
+			<zarobki>240000</zarobki>
+		</strzelcy>
+		<strzelcy>
+			<nazwa>Erik Lamela</nazwa>
+			<klub>Tottenham</klub>
+			<numer>11</numer>
+			<statystyki>
+				<skutecznosc>75</skutecznosc>
+				<lepsza_noga>Prawa</lepsza_noga>
+				<strzelonych>4</strzelonych>
+			</statystyki>
+			<zarobki>120000</zarobki>
+		</strzelcy>
+		<strzelcy>
+			<nazwa>Harry Kane</nazwa>
+			<klub>Tottenham</klub>
+			<numer>10</numer>
+			<statystyki>
+				<skutecznosc>100</skutecznosc>
+				<lepsza_noga>Prawa</lepsza_noga>
+				<strzelonych>10</strzelonych>
+			</statystyki>
+			<zarobki>220000</zarobki>
+		</strzelcy>
+		<stadion>Stadium_wembley</stadion>
+		<stadion>Stadium_emirates</stadion>
+	</karne>
+	<widownia>60000</widownia>
+</mecz>
+
+
+
