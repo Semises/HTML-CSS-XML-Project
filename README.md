@@ -7,4 +7,7 @@ index.htm is the main page of the site - the other files are mainly subpages and
 
 XML folder contains XML and XML schema files, I had to use them to meet the requirements of the project (which are in hihproject.pdf file, unfortunately in Polish).
 
+HTML site with the requirements is in one branch, and XML files are in another.
+
+Have a nice day.
 
